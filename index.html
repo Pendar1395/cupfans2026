@@ -118,7 +118,9 @@ margin-top:50px;
 
 <a href="#">اخبار</a>
 
-<a href="#">برنامه مسابقات</a>
+<a href="#match">
+    <button>شروع کنید</button>
+</a>
 
 <a href="#">تیم‌ها</a>
 
@@ -163,12 +165,46 @@ margin-top:50px;
 </div>
 
 </div>
+<section id="match" style="padding:50px;text-align:center;">
 
+<h2>🏆 بازی منتخب جام جهانی 2026</h2>
+
+<p style="font-size:28px;">
+🇫🇷 فرانسه 🆚 🇲🇦 مراکش
+</p>
+
+<p>
+مرحله: یک‌چهارم نهایی
+</p>
+
+<p>
+برای دیدن نتیجه، آمار و جزئیات مسابقه، به بخش مسابقات مراجعه کنید.
+</p>
+
+</section>
 <footer>
 
 © 2026 WorldCup
 
 </footer>
+
+</body>...
+<div id="matches"></div>
+
+<script>
+const API_KEY = "a2408fda93c944e0b4f8636aa265d94";
+
+fetch("https://api.football-data.org/v4/matches",{
+headers:{
+"X-Auth-Token":API_KEY
+}
+})
+.then(res=>res.json())
+.then(data=>{
+document.getElementById("matches").innerHTML =
+JSON.stringify(data);
+});
+</script>
 
 </body>
 </html>
