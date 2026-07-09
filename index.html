@@ -189,22 +189,34 @@ margin-top:50px;
 </footer>
 
 </body>...
-<div id="matches"></div>
+<div class="cards">
 
-<script>
-const API_KEY = "a2408fda93c944e0b4f8636aa265d94";
+<div class="card">
+<h2>⚽ مسابقات</h2>
+<p>فرانسه 🆚 مراکش</p>
+<p>ساعت: 20:00</p>
+</div>
 
-fetch("https://api.football-data.org/v4/matches",{
-headers:{
-"X-Auth-Token":API_KEY
-}
-})
-.then(res=>res.json())
-.then(data=>{
-document.getElementById("matches").innerHTML =
-JSON.stringify(data);
-});
-</script>
+</div>
+
+<h2>🏆 بازی امروز</h2>
+<p>🇫🇷 فرانسه 🆚 🇲🇦 مراکش</p>
+<p>⏰ ساعت: 22:30</p>
+<div style="background:#222;padding:20px;margin:30px;border-radius:15px;border:3px solid blue;">
+<h2>🏆 یک‌چهارم نهایی جام جهانی ۲۰۲۶</h2>
+
+<h3>🇪🇸 اسپانیا 🆚 🇧🇪 بلژیک</h3>
+
+<p>📅 تاریخ: ۱۰ ژوئیه ۲۰۲۶</p>
+
+<p>⏰ ساعت: ۱۵:۰۰ (به وقت محلی محل برگزاری)</p>
+
+<p>📍 ورزشگاه: لس‌آنجلس</p>
+
+<p>📺 وضعیت: به‌زودی آغاز می‌شود</p>
+</div>
+</body>
+</html>
 
 </body>
 </html>
